@@ -17,6 +17,7 @@ import {AppRoutingModule} from "./app-routing.module"
     FormsModule,
     HeroesModule,
     AppRoutingModule,
+    BrowserAnimationsModule
   ],
   declarations: [
     AppComponent,

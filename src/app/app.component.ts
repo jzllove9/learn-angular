@@ -20,13 +20,14 @@ from '@angular/animations';
 		<a routerLink="/crisis-list" routerLinkActive = "active">Crisis Center</a>
 		<a routerLink="/dashboard" routerLinkActive = "active">Dashboard</a>
 		<a routerLink="/heroes" routerLinkActive = "active">Heroes</a>
+		<a [@a_state]="_s" (click)="toggleState()">testBtn</a>
 	</nav>
 
 	<router-outlet></router-outlet>
 	`, 
 	styleUrls: ['./app.component.css'],
-	/*animations: [
-		trigger('heroState', [
+	animations: [
+		trigger('a_state', [
 				state('inactive', style({
 						backgroundColor: '#eee',
 						transform: 'scale(1)'
@@ -38,9 +39,15 @@ from '@angular/animations';
 				transition('inactive => active', animate('100ms ease-in')),
 				transition('active => inactive', animate('100ms ease-out'))
 			])
-	]*/
+	]
 })
 
 export class AppComponent {
-	title = 'Tour of heroes'
+	title = 'Tour of heroes';
+
+	_s = 'inactive';
+
+	toggleState():void{
+		this._s = this._s == 'active'? 'inactive' : 'active';
+	}
 }
