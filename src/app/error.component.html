@@ -1,0 +1,8 @@
+<h1 [myHighlight] = "color">{{title}}</h1>
+<div [myHighlight] = "color">
+	<input type="radio" name="colors" (click)="color='lightgreen'">Green
+	<input type="radio" name="colors" (click)="color='yellow'">Yellow
+	<input type="radio" name="colors" (click)="color='cyan'">Cyan
+	<input type="radio" name="colors" (click)="color=null">Null
+</div>
+<p [myHighlight] = "color">high light me</p>

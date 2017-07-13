@@ -11,6 +11,8 @@ import {HeroesModule} from './heroes/hero.module'
 
 import {AppRoutingModule} from "./app-routing.module"
 
+import {HighlightDirective} from "./highlight.directive"
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -24,6 +26,7 @@ import {AppRoutingModule} from "./app-routing.module"
     DashboardComponent,
     ErrorComponent,
     CrisisListComponent,
+	HighlightDirective,
   ],
   bootstrap: [AppComponent]
 })
